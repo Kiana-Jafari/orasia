@@ -157,9 +157,9 @@ function HomePage() {
             <div className="self-end">
               <p className="eyebrow">Markets</p>
               <ul className="mt-5 grid grid-cols-2 gap-x-8 gap-y-3">
-                {markets.map((m) => (
+                {markets.map((m, i) => (
                   <li
-                    key={m}
+                    key={`${m}-${i}`}
                     className="border-b border-primary-foreground/15 pb-3 text-sm text-primary-foreground/80"
                   >
                     {m}
