@@ -5,11 +5,12 @@ import type { Product } from "@/content/site";
 export function ProductCard({ product }: { product: Product }) {
   return (
     <article className="group flex h-full flex-col border border-hairline bg-background transition-colors hover:border-navy/30">
-      <div className="flex aspect-4/3 items-center justify-center overflow-hidden bg-ivory">
-        {/* PLACEHOLDER: replace with real product photography */}
-        <span className="px-6 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
-          [Product Image]
-        </span>
+      <div className="aspect-4/3 overflow-hidden bg-ivory">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+        />
       </div>
       <div className="flex flex-1 flex-col p-6">
         <p className="eyebrow">{product.category}</p>

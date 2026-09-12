@@ -5,18 +5,18 @@ import { PageHero } from "@/components/PageHero";
 import { ProductCard } from "@/components/ProductCard";
 import { ActionLink } from "@/components/Button";
 import { products } from "@/content/site";
-import cargo from "@/assets/cargo-ship.jpg";
+import productsImage from "@/assets/products.png";
 
 export const Route = createFileRoute("/products/")({
   head: () => ({
     meta: [
-      { title: "Products | [Company Name] | Import & Export" },
+      { title: "Products | Orasia Trade | Import & Export" },
       {
         name: "description",
         content:
           "Explore our selected range of products available for international sourcing, import and export. Request information on any item.",
       },
-      { property: "og:title", content: "Products | [Company Name] | Import & Export" },
+      { property: "og:title", content: "Products | Orasia Trade | Import & Export" },
       {
         property: "og:description",
         content: "Selected products available for international sourcing, import and export.",
@@ -48,8 +48,8 @@ function ProductsPage() {
         breadcrumb="Products"
         title="Our Products"
         subtitle="Explore our selected range of products available for international sourcing, import, and export."
-        image={cargo}
-        imageAlt="Container vessel photographed from above at sea"
+        image={productsImage}
+        imageAlt="Products"
       />
 
       <Section>
@@ -105,11 +105,6 @@ function ProductsPage() {
             </div>
           </div>
         )}
-
-        <p className="mt-16 text-sm text-muted-foreground">
-          Product names, categories and specifications shown are placeholders and will be replaced with
-          confirmed information. Prices are not published — please request a quotation.
-        </p>
       </Section>
 
       <Section tone="dark">

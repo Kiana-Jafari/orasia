@@ -9,13 +9,13 @@ import worldMap from "@/assets/world-map.jpg";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact [Company Name] | International Trading" },
+      { title: "Contact Orasia Trade | International Trading" },
       {
         name: "description",
         content:
           "Contact our team for product inquiries, sourcing requests, quotations and international trade partnerships.",
       },
-      { property: "og:title", content: "Contact [Company Name] | International Trading" },
+      { property: "og:title", content: "Contact Orasia Trade | International Trading" },
       {
         property: "og:description",
         content: "Get in touch for sourcing requests, quotations and trade partnerships.",

@@ -2,20 +2,20 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section, SectionHeading } from "@/components/Section";
 import { ActionLink } from "@/components/Button";
 import { PageHero } from "@/components/PageHero";
-import { activities, company, markets, principles } from "@/content/site";
+import { company, principles } from "@/content/site";
 import cargo from "@/assets/cargo-ship.jpg";
 import warehouse from "@/assets/warehouse.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About [Company Name] | International Trading Company" },
+      { title: "About Orasia Trade | International Trading Company" },
       {
         name: "description",
         content:
           "Learn about our international trading business: sourcing, import, export and distribution of selected products for buyers and suppliers worldwide.",
       },
-      { property: "og:title", content: "About [Company Name] | International Trading Company" },
+      { property: "og:title", content: "About Orasia Trade | International Trading Company" },
       {
         property: "og:description",
         content: "Building reliable connections across international markets.",
@@ -41,22 +41,28 @@ function AboutPage() {
 
       <Section>
         <div className="grid gap-12 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
-          <SectionHeading eyebrow="Overview" title="Company Overview" />
+          <SectionHeading eyebrow="Our Story" title="From Coffee to International Trade" />
+
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              {company.name} is an international trading company active in the sourcing, import, export
-              and distribution of selected products. We work between suppliers and buyers, coordinating
-              the commercial and logistical steps required to move goods across borders.
+              {company.name} began with coffee — and with it, a simple standard that has stayed
+              with us ever since. A young, motivated team took its first steps into international
+              trade by learning, cup by cup, what quality actually means: the sourcing, the grading,
+              and the small decisions that separate a good batch from an exceptional one.
             </p>
+
             <p>
-              Our main product categories are [Product Category], [Product Category] and [Product
-              Category]. Our geographic focus covers {markets.join(", ")}.
+              That standard shaped how we think about every product we bring to market. We don't
+              treat what we trade as inventory — each product carries our name, so it's chosen with
+              the same care you'd give to something you're proud to stand behind. That's why our
+              selection process stays deliberate, even when it would be faster not to be.
             </p>
+
             <p>
-              Our business model is straightforward: we identify requirements, match them with suitable
-              supply, and manage the trade relationship through to delivery. Commercial terms are agreed
-              case by case with each partner. [Replace this paragraph with your confirmed business model
-              description.]
+              Today, {company.name} is a trading company focused on building reliable connections
+              between suppliers, buyers, and international markets. Through our sourcing network
+              and commercial partnerships, we facilitate the movement of selected products across
+              borders with a focus on quality, reliability, and long-term business relationships.
             </p>
           </div>
         </div>
@@ -69,21 +75,6 @@ function AboutPage() {
             Our mission is to build dependable trade relationships by connecting quality products with the
             right markets and creating sustainable value for our business partners.
           </p>
-        </div>
-      </Section>
-
-      <Section tone="ivory">
-        <SectionHeading eyebrow="Activities" title="Our Activities" />
-        <div className="mt-14 grid gap-px sm:grid-cols-2">
-          {activities.map((a) => (
-            <div key={a.number} className="border-t border-hairline py-8 pr-8">
-              <span className="font-[family-name:var(--font-display)] text-sm font-semibold text-bronze">
-                {a.number}
-              </span>
-              <h3 className="mt-4 text-xl text-navy">{a.title}</h3>
-              <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">{a.body}</p>
-            </div>
-          ))}
         </div>
       </Section>
 

@@ -23,9 +23,9 @@ export function PageHero({
         alt={imageAlt}
         width={1600}
         height={900}
-        className="absolute inset-0 -z-10 h-full w-full object-cover opacity-35"
+        className="absolute inset-0 -z-10 h-full w-full object-cover opacity-80"
       />
-      <div className="absolute inset-0 -z-10 bg-navy-deep/60" />
+      <div className="absolute inset-0 -z-10 bg-navy-deep/35" />
       <div className="mx-auto w-full max-w-[1200px] px-5 py-20 sm:px-8 md:py-28">
         <nav aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-2 text-xs text-primary-foreground/60">

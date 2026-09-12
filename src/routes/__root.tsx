@@ -79,13 +79,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "[Company Name] | International Trading & Import Export" },
+      { title: "Orasia Trade | International Trading & Import Export" },
       {
         name: "description",
         content:
           "International trading company engaged in sourcing, import, export and distribution across global markets.",
       },
-      { property: "og:site_name", content: "[Company Name]" },
+      { property: "og:site_name", content: "Orasia Trade" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

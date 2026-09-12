@@ -3,27 +3,41 @@
 // No factual claims, statistics, certifications or partners are invented here.
 // -----------------------------------------------------------------------------
 
+import greenCoffeeImage from "@/assets/coffee-sample.png"
+import greenCoffeeHeroImage from "@/assets/coffee-background.png"
+
+import turmericProduct from "@/assets/turmeric-product.png"
+import turmericHeroImage from "@/assets/turmeric-background.png"
+
+import cinnamonProduct from "@/assets/Cinnamon.png"
+import cinnamonHeroImage from "@/assets/Cinnamon-background.png"
+
+import piaromProduct from "@/assets/piarom-product.png"
+import piaromHeroImage from "@/assets/piarom-background.png"
+
+import zahidiProduct from "@/assets/zahidi-product.png"
+import zahidiHeroImage from "@/assets/zahidi-background.png"
+
+import mazafatiProduct from "@/assets/mazafati-product.png"
+import mazafatiHeroImage from "@/assets/mazafati-background.png"
+
 export const company = {
-  name: "[Company Name]",
-  shortName: "[Company]",
+  name: "Orasia Trade",
+  shortName: "Orasia",
   tagline: "International Trading | Import & Export",
   description:
-    "[Company Name] is an international trading company engaged in the sourcing, import, export, and distribution of selected products across global markets.",
-  address: "[Street Address], [City], [Country]",
-  phone: "[+00 000 000 0000]",
-  whatsapp: "[+00 000 000 0000]",
-  email: "[info@company.com]",
-  website: "[www.company.com]",
-  hours: "[Sunday – Thursday, 09:00 – 17:00 (local time)]",
-  social: [] as { label: string; href: string }[], // Add only real, existing accounts.
+    "Orasia Trade is an international trading company engaged in the sourcing, import, export, and distribution of selected products across global markets.",
+  address: "Sa'adat Abad, Tehran, Iran",
+  phone: "+98 21 2676 1176",
+  whatsapp: "+98 919 046 6275",
+  email: "commercial@orasiatrade.com",
+  website: "orasiatrade.com",
+  hours: "Saturday – Thursday, 09:00 – 17:00",
+  social: [
+    { label: "LinkedIn", href: "https://www.linkedin.com/company/orasia-trade" },
+    { label: "Instagram", href: "https://www.instagram.com/orasiatrade" },
+  ] as { label: string; href: string }[], // Add only real, existing accounts.
 };
-
-export const markets = [
-  "[Region / Country]",
-  "[Region / Country]",
-  "[Region / Country]",
-  "[Region / Country]",
-];
 
 export const activities = [
   {
@@ -81,6 +95,8 @@ export type Product = {
   category: string;
   trade: "import" | "export";
   summary: string;
+  image: string;
+  heroImage: string;
   origin: string;
   formats: string;
   packaging: string;
@@ -94,27 +110,31 @@ export type Product = {
 export const products: Product[] = [
   {
     slug: "import-product-01",
-    name: "[Product Name 01]",
-    category: "[Product Category]",
+    name: "Green Coffee Beans",
+    category: "Coffee & Beverages",
     trade: "import",
-    summary: "[Short product description — one or two lines describing the product.]",
-    origin: "[Country of origin]",
-    formats: "[Available formats]",
-    packaging: "[Packaging details]",
-    moq: "[Minimum order quantity]",
+    summary: "Discover our premium Green Coffee Beans, featuring wonderful Arabica from Ethiopia and Colombia, along with robust Robusta from Uganda, Indonesia, and Vietnam. Enjoy the rich flavors and top-notch quality of our ethically sourced selections, which are perfect for all your roasting adventures!",
+    image: greenCoffeeImage,
+    heroImage: greenCoffeeHeroImage,
+    origin: "Ethiopia | Colombia | Uganda | Indonesia | Vietnam",
+    formats: "Green Coffee Beans | Roasted Coffee Beans",
+    packaging: "You can have our 300 g sample for free. Test and become our next permanent customer!",
+    moq: "100 kg",
     specifications: "[Specifications to be provided]",
     certifications: "[Certifications to be provided]",
     notes: "[Additional information to be provided]",
   },
   {
     slug: "import-product-02",
-    name: "[Product Name 02]",
-    category: "[Product Category]",
+    name: "Turmeric",
+    category: "Spices & Herbs",
     trade: "import",
-    summary: "[Short product description — one or two lines describing the product.]",
-    origin: "[Country of origin]",
+    summary: "Golden, earthy, and packed with color — our Turmeric is chosen for its vibrant hue and consistent quality. A staple for food producers, spice blenders, and health-focused brands who want a supplier they can rely on batch after batch.",
+    image: turmericProduct,
+    heroImage: turmericHeroImage,
+    origin: "India",
     formats: "[Available formats]",
-    packaging: "[Packaging details]",
+    packaging: "Request a free sample and see the color and aroma for yourself.",
     moq: "[Minimum order quantity]",
     specifications: "[Specifications to be provided]",
     certifications: "[Certifications to be provided]",
@@ -122,13 +142,15 @@ export const products: Product[] = [
   },
   {
     slug: "import-product-03",
-    name: "[Product Name 03]",
-    category: "[Product Category]",
+    name: "Cinnamon",
+    category: "Spices & Herbs",
     trade: "import",
-    summary: "[Short product description — one or two lines describing the product.]",
-    origin: "[Country of origin]",
+    summary: "Warm, aromatic, and full of character — our Cinnamon is sourced from trusted growing regions known for their rich flavor and natural oil content. Whether you're stocking a spice line or supplying bakeries and beverage brands, we bring you a batch worth building a menu around.",
+    image: cinnamonProduct,
+    heroImage: cinnamonHeroImage,
+    origin: "Sri Lanka | Indonesia | Vietnam",
     formats: "[Available formats]",
-    packaging: "[Packaging details]",
+    packaging: "Ask us for a sample — taste and smell the difference before you commit to a full order.",
     moq: "[Minimum order quantity]",
     specifications: "[Specifications to be provided]",
     certifications: "[Certifications to be provided]",
@@ -136,12 +158,14 @@ export const products: Product[] = [
   },
   {
     slug: "export-product-01",
-    name: "[Product Name 04]",
-    category: "[Product Category]",
+    name: "Piarom Dates",
+    category: "Dried Fruits",
     trade: "export",
-    summary: "[Short product description — one or two lines describing the product.]",
-    origin: "[Country of origin]",
-    formats: "[Available formats]",
+    summary: "Slim, dark, and prized for their rich, semi-dry sweetness — Piarom dates are one of Iran's most sought-after varieties. Naturally low in moisture and free from added sugar, they're a favorite for buyers looking for a premium, gift-worthy date.",
+    image: piaromProduct,
+    heroImage: piaromHeroImage,
+    origin: "Iran",
+    formats: "Whole Dates",
     packaging: "[Packaging details]",
     moq: "[Minimum order quantity]",
     specifications: "[Specifications to be provided]",
@@ -150,11 +174,13 @@ export const products: Product[] = [
   },
   {
     slug: "export-product-02",
-    name: "[Product Name 05]",
-    category: "[Product Category]",
+    name: "Zahedi Dates",
+    category: "Dried Fruits",
     trade: "export",
-    summary: "[Short product description — one or two lines describing the product.]",
-    origin: "[Country of origin]",
+    summary: "Firm, semi-dry, and wonderfully versatile — Zahedi dates hold their shape and texture well, making them a reliable choice for both direct consumption and food processing. A dependable everyday variety trusted by buyers across the world.",
+    image: zahidiProduct,
+    heroImage: zahidiHeroImage,
+    origin: "Iran",
     formats: "[Available formats]",
     packaging: "[Packaging details]",
     moq: "[Minimum order quantity]",
@@ -164,11 +190,13 @@ export const products: Product[] = [
   },
   {
     slug: "export-product-03",
-    name: "[Product Name 06]",
-    category: "[Product Category]",
+    name: "Mazafati Dates",
+    category: "Dried Fruits",
     trade: "export",
-    summary: "[Short product description — one or two lines describing the product.]",
-    origin: "[Country of origin]",
+    summary: "Soft, moist, and deeply sweet — Mazafati is one of Iran's most loved date varieties, known for its dark color and melt-in-your-mouth texture. A top pick for buyers who want a date that feels indulgent straight out of the box.",
+    image: mazafatiProduct,
+    heroImage: mazafatiHeroImage,
+    origin: "Iran",
     formats: "[Available formats]",
     packaging: "[Packaging details]",
     moq: "[Minimum order quantity]",

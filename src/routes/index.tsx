@@ -10,13 +10,13 @@ import worldMap from "@/assets/world-map.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "[Company Name] | International Trading & Import Export" },
+      { title: "Orasia Trade | International Trading & Import Export" },
       {
         name: "description",
         content:
           "International trading company engaged in the sourcing, import, export and distribution of selected products across global markets.",
       },
-      { property: "og:title", content: "[Company Name] | International Trading & Import Export" },
+      { property: "og:title", content: "Orasia Trade | International Trading & Import Export" },
       {
         property: "og:description",
         content:
@@ -44,16 +44,16 @@ function HomePage() {
           width={1920}
           height={1088}
           fetchPriority="high"
-          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-45"
+          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-80"
         />
-        <div className="absolute inset-0 -z-10 bg-linear-to-r from-navy-deep/95 via-navy-deep/70 to-navy-deep/30" />
+        <div className="absolute inset-0 -z-10 bg-linear-to-r from-navy-deep/70 via-navy-deep/45 to-navy-deep/15" />
         <div className="mx-auto w-full max-w-[1200px] px-5 py-24 sm:px-8 md:py-32">
           <div className="max-w-2xl reveal">
             <p className="eyebrow">International Trading Company</p>
             <h1 className="mt-4 text-4xl leading-[1.08] text-primary-foreground sm:text-5xl md:text-6xl">
-              Connecting Markets.
+              Trusted trade,
               <br />
-              Delivering Opportunities.
+              from source to destination.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
               {company.description}
@@ -76,19 +76,9 @@ function HomePage() {
           <div>
             <SectionHeading eyebrow="Introduction" title="Who We Are" />
             <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
-              <p>
-                {company.name} is a trading company focused on building reliable connections between
-                suppliers, buyers, and international markets.
-              </p>
-              <p>
-                Through our sourcing network and commercial partnerships, we facilitate the movement of
-                selected products across borders with a focus on quality, reliability, and long-term
-                business relationships.
-              </p>
+            <p className="text-base leading-relaxed text-muted-foreground">Want to know us? Read our story here!</p>
             </div>
-            <ActionLink to="/about" variant="outline" className="mt-8">
-              Learn More About Us
-            </ActionLink>
+            <ActionLink to="/about" variant="outline" className="mt-6">Read Our Story</ActionLink>
           </div>
           <img
             src={warehouse}
@@ -146,30 +136,15 @@ function HomePage() {
           loading="lazy"
           className="absolute inset-0 -z-10 h-full w-full object-cover opacity-60"
         />
+
         <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
-          <div className="grid gap-12 md:grid-cols-2">
+          <div>
             <SectionHeading
               eyebrow="Global Reach"
               title="Connecting Markets"
               onDark
               intro="We work across borders to match products with the markets that require them — coordinating sourcing, documentation, and delivery between suppliers and buyers."
             />
-            <div className="self-end">
-              <p className="eyebrow">Markets</p>
-              <ul className="mt-5 grid grid-cols-2 gap-x-8 gap-y-3">
-                {markets.map((m, i) => (
-                  <li
-                    key={`${m}-${i}`}
-                    className="border-b border-primary-foreground/15 pb-3 text-sm text-primary-foreground/80"
-                  >
-                    {m}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-5 text-xs text-primary-foreground/45">
-                Placeholder — replace with confirmed markets.
-              </p>
-            </div>
           </div>
         </div>
       </section>

@@ -40,31 +40,65 @@
 
 :root {
   --radius: 3px;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.22 0.028 258);
+
+  /* =========================
+     ORASIA COLOR PALETTE
+     ========================= */
+
+  /* White */
+  --background: oklch(0.995 0 0);
+  --foreground: oklch(0.24 0.035 55);
+
+  /* Cards */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.028 258);
+  --card-foreground: oklch(0.24 0.035 55);
+
+  /* Popovers */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.028 258);
+  --popover-foreground: oklch(0.24 0.035 55);
+
+  /* Deep Navy — corporate identity */
   --primary: oklch(0.26 0.038 259);
   --primary-foreground: oklch(0.98 0.006 92);
-  --secondary: oklch(0.968 0.008 88);
+
+  /* Soft white / very light neutral */
+  --secondary: oklch(0.975 0.004 85);
   --secondary-foreground: oklch(0.26 0.038 259);
-  --muted: oklch(0.965 0.005 260);
-  --muted-foreground: oklch(0.52 0.018 258);
-  --accent: oklch(0.62 0.062 72);
-  --accent-foreground: oklch(0.98 0.006 92);
+
+  /* Muted sections */
+  --muted: oklch(0.965 0.006 85);
+  --muted-foreground: oklch(0.48 0.035 55);
+
+  /* Gold */
+  --accent: oklch(0.68 0.14 75);
+  --accent-foreground: oklch(0.22 0.035 55);
+
+  /* Utility */
   --destructive: oklch(0.55 0.2 27);
   --destructive-foreground: oklch(0.98 0.006 92);
-  --border: oklch(0.9 0.008 258);
-  --input: oklch(0.88 0.008 258);
-  --ring: oklch(0.62 0.062 72);
 
-  --ivory: oklch(0.973 0.008 88);
+  /* Borders */
+  --border: oklch(0.88 0.025 75);
+  --input: oklch(0.86 0.025 75);
+  --ring: oklch(0.68 0.14 75);
+
+  /* =========================
+     CUSTOM ORASIA COLORS
+     ========================= */
+
+  /* Soft ivory — alternate sections */
+  --ivory: oklch(0.965 0.012 82);
+
+  /* Navy */
   --navy: oklch(0.26 0.038 259);
   --navy-deep: oklch(0.19 0.032 259);
-  --bronze: oklch(0.65 0.07 72);
-  --hairline: oklch(0.9 0.008 258);
+
+  /* Coffee Brown */
+  --bronze: oklch(0.44 0.085 50);
+  --gold: oklch(0.68 0.14 75);    /* Gold */
+
+  /* Warm Gold / Beige borders */
+  --hairline: oklch(0.87 0.025 75);
 }
 
 @layer base {
@@ -99,12 +133,32 @@
   }
 }
 
+@utility navy-section {
+  color: var(--color-primary-foreground);
+}
+
+@utility navy-section-text {
+  color: var(--color-primary-foreground);
+}
+
+@utility navy-section-muted {
+  color: color-mix(in oklch, var(--color-primary-foreground) 72%, transparent);
+}
+
 @utility eyebrow {
   font-size: 0.6875rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 600;
   color: var(--color-bronze);
+}
+
+@utility eyebrow-light {
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-primary-foreground);
 }
 
 @utility rule-top {
