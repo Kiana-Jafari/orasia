@@ -9,7 +9,7 @@ import greenCoffeeHeroImage from "@/assets/coffee-background.png"
 import turmericProduct from "@/assets/turmeric-product.png"
 import turmericHeroImage from "@/assets/turmeric-background.png"
 
-import cinnamonProduct from "@/assets/Cinnamon.png"
+import cinnamonProduct from "@/assets/Cinnamon.webp"
 import cinnamonHeroImage from "@/assets/Cinnamon-background.png"
 
 import piaromProduct from "@/assets/piarom-product.png"
