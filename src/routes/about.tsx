@@ -94,7 +94,30 @@ function AboutPage() {
             <SectionHeading
               eyebrow="Our Operations"
               title="Where We Work"
+              intro="[Replace with a short paragraph describing your offices, warehousing, or sourcing locations.]"
             />
+
+            <ul className="mt-8 space-y-4">
+              <li className="border-t border-navy/80 pt-4">
+                <h3 className="text-sm font-medium text-navy">[Head Office]</h3>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                  [City, country — short description, e.g. commercial operations and sourcing coordination.]
+                </p>
+              </li>
+              <li className="border-t border-navy/80 pt-4">
+                <h3 className="text-sm font-medium text-navy">[Sourcing Network]</h3>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                  [Regions or countries you actively source from, e.g. Ethiopia, Colombia, Iran.]
+                </p>
+              </li>
+              <li className="border-t border-navy/80 pt-4">
+                <h3 className="text-sm font-medium text-navy">[Logistics & Distribution]</h3>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                  [How shipments move — ports used, partners, or distribution reach.]
+                </p>
+              </li>
+            </ul>
+
             <ActionLink to="/contact" variant="outline" className="mt-8">
               Contact Us
             </ActionLink>

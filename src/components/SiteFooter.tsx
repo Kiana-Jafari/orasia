@@ -56,7 +56,7 @@ export function SiteFooter() {
       <div className="border-t border-primary-foreground/10">
         <div className="mx-auto w-full max-w-[1200px] px-5 py-6 sm:px-8">
           <p className="text-xs text-primary-foreground/50">
-            © 2026 {company.name}. All rights reserved.
+            © {new Date().getFullYear()} {company.name}. All rights reserved.
           </p>
         </div>
       </div>
