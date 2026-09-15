@@ -1,7 +1,8 @@
 deployment:
   tasks:
-    - export NITRO_PRESET=node-server
+    - source /home/orasiatradecom/nodevenv/orasia/22/bin/activate
     - npm ci --include=dev
+    - export NITRO_PRESET=node-server
     - npm run build
     - rm -rf /home/orasiatradecom/orasia/.output
     - cp -a .output /home/orasiatradecom/orasia/.output
