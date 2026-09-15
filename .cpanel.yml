@@ -1,0 +1,4 @@
+---
+  deployment:
+    tasks:
+      - echo "Orasia deployment started"
