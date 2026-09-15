@@ -18,7 +18,7 @@ export function Section({
     dark: "bg-navy text-primary-foreground",
   } as const;
   return (
-    <section id={id} className={cn("py-20 md:py-28", tones[tone], className)}>
+    <section id={id} className={cn("py-14 md:py-20", tones[tone], className)}>
       <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">{children}</div>
     </section>
   );
@@ -41,7 +41,11 @@ export function SectionHeading({
 }) {
   return (
     <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}>
-      {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
+      {eyebrow ? (
+        <p className={cn(onDark ? "eyebrow-light" : "eyebrow")}>
+          {eyebrow}
+        </p>
+      ) : null}
       <As
         className={cn(
           "mt-3 text-3xl leading-tight sm:text-4xl md:text-[2.75rem]",

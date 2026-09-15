@@ -4,7 +4,6 @@ import { ActionLink } from "@/components/Button";
 import { PageHero } from "@/components/PageHero";
 import { company, principles } from "@/content/site";
 import cargo from "@/assets/cargo-ship.jpg";
-import warehouse from "@/assets/warehouse.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -70,10 +69,9 @@ function AboutPage() {
 
       <Section tone="dark">
         <div className="max-w-3xl">
-          <p className="eyebrow">Our Mission</p>
-          <p className="mt-6 font-[family-name:var(--font-display)] text-2xl leading-snug text-primary-foreground sm:text-3xl">
-            Our mission is to build dependable trade relationships by connecting quality products with the
-            right markets and creating sustainable value for our business partners.
+          <p className="eyebrow-light">Our Mission</p>
+          <p className="mt-6 font-[Calibri,sans-serif] text-2xl leading-snug text-primary-foreground sm:text-3xl">
+            {company.mission}
           </p>
         </div>
       </Section>
@@ -96,7 +94,6 @@ function AboutPage() {
             <SectionHeading
               eyebrow="Our Operations"
               title="Where We Work"
-              intro="Representative image. [Replace with an authentic photograph of your own premises or operations once available — no location is implied here.]"
             />
             <ActionLink to="/contact" variant="outline" className="mt-8">
               Contact Us
@@ -104,15 +101,13 @@ function AboutPage() {
           </div>
           <figure>
             <img
-              src={warehouse}
-              alt="Interior of a distribution warehouse with palletised goods"
+              alt="An image of the company"
               width={1200}
               height={1400}
               loading="lazy"
               className="aspect-4/3 w-full rounded-sm object-cover"
             />
             <figcaption className="mt-3 text-xs text-muted-foreground">
-              [Placeholder image — not a photograph of the company's premises.]
             </figcaption>
           </figure>
         </div>

@@ -36,6 +36,8 @@
   --color-navy-deep: var(--navy-deep);
   --color-bronze: var(--bronze);
   --color-hairline: var(--hairline);
+  --color-gold: var(--gold);
+  --color-yellow-accent: var(--yellow-accent);
 }
 
 :root {
@@ -46,7 +48,7 @@
      ========================= */
 
   /* White */
-  --background: oklch(0.995 0 0);
+  --background: oklch(0.96 0 0);
   --foreground: oklch(0.24 0.035 55);
 
   /* Cards */
@@ -72,6 +74,7 @@
   /* Gold */
   --accent: oklch(0.68 0.14 75);
   --accent-foreground: oklch(0.22 0.035 55);
+  --yellow-accent: oklch(0.82 0.14 85);
 
   /* Utility */
   --destructive: oklch(0.55 0.2 27);
@@ -87,15 +90,16 @@
      ========================= */
 
   /* Soft ivory — alternate sections */
-  --ivory: oklch(0.965 0.012 82);
+  --ivory: oklch(0.90 0.015 82);
 
   /* Navy */
-  --navy: oklch(0.26 0.038 259);
-  --navy-deep: oklch(0.19 0.032 259);
+  --navy: oklch(0.20 0.038 259);
+  --navy-deep: oklch(0.14 0.032 259);
 
   /* Coffee Brown */
   --bronze: oklch(0.44 0.085 50);
-  --gold: oklch(0.68 0.14 75);    /* Gold */
+  --gold: oklch(0.68 0.14 75);
+  /* Gold */
 
   /* Warm Gold / Beige borders */
   --hairline: oklch(0.87 0.025 75);
@@ -174,6 +178,7 @@
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: none;

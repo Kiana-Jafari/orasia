@@ -37,12 +37,7 @@ function ProductDetail() {
     { label: "Category", value: product.category },
     { label: "Trade", value: product.trade === "import" ? "Import" : "Export" },
     { label: "Origin", value: product.origin },
-    { label: "Available formats", value: product.formats },
     { label: "Packaging", value: product.packaging },
-    { label: "Minimum order quantity", value: product.moq },
-    { label: "Specifications", value: product.specifications },
-    { label: "Certifications", value: product.certifications },
-    { label: "Additional information", value: product.notes },
   ];
 
   return (
@@ -71,7 +66,7 @@ function ProductDetail() {
             <p className="eyebrow">{product.category}</p>
 
             <h2 className="mt-3 text-3xl text-navy">
-            Product Details
+              Product Details
             </h2>
 
             <dl className="mt-8">
@@ -80,13 +75,13 @@ function ProductDetail() {
                   key={s.label}
                   className="grid grid-cols-1 gap-1 border-b border-hairline py-4 first:border-t sm:grid-cols-[180px_1fr] sm:gap-6"
                 >
-                <dt className="text-sm text-muted-foreground">
-                  {s.label}
-                </dt>
+                  <dt className="text-sm text-muted-foreground">
+                    {s.label}
+                  </dt>
 
-                <dd className="text-sm text-navy">
-                  {s.value}
-                </dd>
+                  <dd className="text-sm text-navy">
+                    {s.value}
+                  </dd>
                 </div>
               ))}
             </dl>
@@ -100,10 +95,6 @@ function ProductDetail() {
                 Back to Products
               </ActionLink>
             </div>
-
-            <p className="mt-6 text-xs text-muted-foreground">
-              All values shown are placeholders pending confirmed product data.
-            </p>
           </div>
 
         </div>

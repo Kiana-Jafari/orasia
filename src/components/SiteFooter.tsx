@@ -5,20 +5,8 @@ export function SiteFooter() {
   return (
     <footer className="bg-navy-deep text-primary-foreground">
       <div className="mx-auto grid w-full max-w-[1200px] gap-12 px-5 py-16 sm:px-8 md:grid-cols-[1.4fr_1fr_1.2fr]">
-        <div>
-          <p className="font-[family-name:var(--font-display)] text-lg font-extrabold tracking-tight">
-            {company.name}
-          </p>
-          <p className="mt-1 text-[0.625rem] uppercase tracking-[0.2em] text-primary-foreground/50">
-            {company.tagline}
-          </p>
-          <p className="mt-5 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
-            {company.description}
-          </p>
-        </div>
-
         <nav aria-label="Footer">
-          <h2 className="eyebrow">Navigation</h2>
+          <h2 className="eyebrow-light">Navigation</h2>
           <ul className="mt-5 space-y-3">
             {navigation.map((item) => (
               <li key={item.to}>
@@ -34,7 +22,7 @@ export function SiteFooter() {
         </nav>
 
         <div>
-          <h2 className="eyebrow">Contact</h2>
+          <h2 className="eyebrow-light">Contact</h2>
           <ul className="mt-5 space-y-3 text-sm text-primary-foreground/70">
             <li>
               <a className="transition-colors hover:text-primary-foreground" href={`mailto:${company.email}`}>

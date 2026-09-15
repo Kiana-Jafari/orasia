@@ -2,9 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Section, SectionHeading } from "@/components/Section";
 import { ActionLink } from "@/components/Button";
 import { ProductCard } from "@/components/ProductCard";
-import { activities, company, markets, products, valuePoints } from "@/content/site";
-import heroPort from "@/assets/hero-port.jpg";
-import warehouse from "@/assets/warehouse.jpg";
+import { activities, company, products } from "@/content/site";
+import heroPort from "@/assets/hero-port.png";
 import worldMap from "@/assets/world-map.jpg";
 
 export const Route = createFileRoute("/")({
@@ -37,25 +36,25 @@ function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative isolate flex min-h-[560px] items-center overflow-hidden bg-navy-deep md:min-h-[640px]">
+      <section className="relative isolate flex min-h-[560px] items-end overflow-hidden bg-navy-deep md:min-h-[640px]">
         <img
           src={heroPort}
           alt="Container terminal at dusk with stacked shipping containers and gantry cranes"
           width={1920}
           height={1088}
           fetchPriority="high"
-          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-80"
+          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-95"
         />
-        <div className="absolute inset-0 -z-10 bg-linear-to-r from-navy-deep/70 via-navy-deep/45 to-navy-deep/15" />
-        <div className="mx-auto w-full max-w-[1200px] px-5 py-24 sm:px-8 md:py-32">
+        <div className="absolute inset-0 -z-10 bg-linear-to-r from-navy-deep/50 via-navy-deep/30 to-navy-deep/10" />
+        <div className="mx-auto w-full max-w-[1200px] px-5 py-16 sm:px-8 md:py-20">
           <div className="max-w-2xl reveal">
-            <p className="eyebrow">International Trading Company</p>
+            <p className="eyebrow text-primary-foreground/75">International Trading Company</p>
             <h1 className="mt-4 text-4xl leading-[1.08] text-primary-foreground sm:text-5xl md:text-6xl">
               Trusted trade,
               <br />
               from source to destination.
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/95 sm:text-lg">
               {company.description}
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
@@ -76,13 +75,14 @@ function HomePage() {
           <div>
             <SectionHeading eyebrow="Introduction" title="Who We Are" />
             <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
-            <p className="text-base leading-relaxed text-muted-foreground">Want to know us? Read our story here!</p>
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
+                A trading company built on trust, quality, and long-term partnerships across global markets.
+              </p>
             </div>
             <ActionLink to="/about" variant="outline" className="mt-6">Read Our Story</ActionLink>
           </div>
           <img
-            src={warehouse}
-            alt="Palletised goods stored in a bright, organised distribution warehouse"
+            alt="An image of us"
             width={1200}
             height={1400}
             loading="lazy"
@@ -92,15 +92,15 @@ function HomePage() {
       </Section>
 
       {/* What we do */}
-      <Section tone="ivory">
+      <Section tone="ivory" className="py-14 md:py-20">
         <SectionHeading eyebrow="Business Activities" title="What We Do" />
-        <div className="mt-14 grid gap-px border-t border-hairline sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-px border-t border-hairline sm:grid-cols-2 lg:grid-cols-4">
           {activities.map((a) => (
-            <div key={a.number} className="border-b border-hairline py-8 pr-8 sm:border-b-0 sm:pt-10">
+            <div key={a.number} className="border-b border-hairline py-6 pr-8 sm:border-b-0 sm:pt-6">
               <span className="font-[family-name:var(--font-display)] text-sm font-semibold text-bronze">
                 {a.number}
               </span>
-              <h3 className="mt-4 text-xl text-navy">{a.title}</h3>
+              <h3 className="mt-3 text-lg text-navy">{a.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{a.body}</p>
             </div>
           ))}
@@ -127,14 +127,14 @@ function HomePage() {
       </Section>
 
       {/* Global markets */}
-      <section className="relative isolate overflow-hidden bg-navy py-20 md:py-28">
+      <section className="relative isolate overflow-hidden bg-navy py-14 md:py-20">
         <img
           src={worldMap}
           alt="Stylised dotted world map"
           width={1600}
           height={800}
           loading="lazy"
-          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-60"
+          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-90"
         />
 
         <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
@@ -148,28 +148,6 @@ function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Trust */}
-      <Section tone="ivory">
-        <div className="grid gap-12 md:grid-cols-[1fr_1.1fr] md:gap-16">
-          <SectionHeading
-            eyebrow="Why Work With Us"
-            title="Built for Long-Term Business"
-            intro="We aim to be a dependable commercial counterpart rather than a one-time intermediary."
-          />
-          <ul className="grid gap-px self-center">
-            {valuePoints.map((v) => (
-              <li
-                key={v}
-                className="flex items-baseline gap-4 border-b border-hairline py-4 first:border-t"
-              >
-                <span className="h-1 w-1 shrink-0 translate-y-[-2px] rounded-full bg-bronze" />
-                <span className="text-base text-navy">{v}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Section>
 
       {/* CTA */}
       <Section tone="dark">

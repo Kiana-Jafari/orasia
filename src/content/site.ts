@@ -27,6 +27,8 @@ export const company = {
   tagline: "International Trading | Import & Export",
   description:
     "Orasia Trade is an international trading company engaged in the sourcing, import, export, and distribution of selected products across global markets.",
+  mission:
+    "To build dependable trade relationships by connecting quality products with the right markets and creating sustainable value for our business partners.",
   address: "Sa'adat Abad, Tehran, Iran",
   phone: "+98 21 2676 1176",
   whatsapp: "+98 919 046 6275",
@@ -36,7 +38,7 @@ export const company = {
   social: [
     { label: "LinkedIn", href: "https://www.linkedin.com/company/orasia-trade" },
     { label: "Instagram", href: "https://www.instagram.com/orasiatrade" },
-  ] as { label: string; href: string }[], // Add only real, existing accounts.
+  ] as { label: string; href: string }[],
 };
 
 export const activities = [
@@ -81,14 +83,6 @@ export const principles = [
   },
 ];
 
-export const valuePoints = [
-  "Reliable sourcing",
-  "Quality-focused selection",
-  "Responsive communication",
-  "International market knowledge",
-  "Long-term partnerships",
-];
-
 export type Product = {
   slug: string;
   name: string;
@@ -98,12 +92,7 @@ export type Product = {
   image: string;
   heroImage: string;
   origin: string;
-  formats: string;
   packaging: string;
-  moq: string;
-  specifications: string;
-  certifications: string;
-  notes: string;
 };
 
 // PLACEHOLDER catalogue. Replace names, categories and specifications with real data.
@@ -113,7 +102,7 @@ export const products: Product[] = [
     name: "Green Coffee Beans",
     category: "Coffee & Beverages",
     trade: "import",
-    summary: "Discover our premium Green Coffee Beans, featuring wonderful Arabica from Ethiopia and Colombia, along with robust Robusta from Uganda, Indonesia, and Vietnam. Enjoy the rich flavors and top-notch quality of our ethically sourced selections, which are perfect for all your roasting adventures!",
+    summary: "Try our premium Green Coffee Beans! We offer delicious Arabica beans from Ethiopia and Colombia, as well as strong Robusta beans from Uganda, Indonesia, and Vietnam. Enjoy great flavors and high quality with our ethically sourced selections, perfect for your roasting adventures!",
     image: greenCoffeeImage,
     heroImage: greenCoffeeHeroImage,
     origin: "Ethiopia | Colombia | Uganda | Indonesia | Vietnam",
@@ -129,7 +118,7 @@ export const products: Product[] = [
     name: "Turmeric",
     category: "Spices & Herbs",
     trade: "import",
-    summary: "Golden, earthy, and packed with color — our Turmeric is chosen for its vibrant hue and consistent quality. A staple for food producers, spice blenders, and health-focused brands who want a supplier they can rely on batch after batch.",
+    summary: "Golden, earthy, and colorful — Turmeric is chosen for its bright hue and steady quality. A key ingredient for food producers, spice makers, and health-focused brands that need a reliable supplier, batch after batch.",
     image: turmericProduct,
     heroImage: turmericHeroImage,
     origin: "India",
@@ -161,7 +150,7 @@ export const products: Product[] = [
     name: "Piarom Dates",
     category: "Dried Fruits",
     trade: "export",
-    summary: "Slim, dark, and prized for their rich, semi-dry sweetness — Piarom dates are one of Iran's most sought-after varieties. Naturally low in moisture and free from added sugar, they're a favorite for buyers looking for a premium, gift-worthy date.",
+    summary: "Slim, dark, and prized for their rich, semi-dry sweetness — Piarom dates are one of Iran's most popular types of dates in Iran. Naturally low in moisture and free from added sugar, they're a favorite for buyers looking for a premium, gift-worthy date.",
     image: piaromProduct,
     heroImage: piaromHeroImage,
     origin: "Iran",
@@ -193,7 +182,7 @@ export const products: Product[] = [
     name: "Mazafati Dates",
     category: "Dried Fruits",
     trade: "export",
-    summary: "Soft, moist, and deeply sweet — Mazafati is one of Iran's most loved date varieties, known for its dark color and melt-in-your-mouth texture. A top pick for buyers who want a date that feels indulgent straight out of the box.",
+    summary: "Soft, moist, and deeply sweet — Mazafati is one of Iran's most loved date varieties, known for its dark color and melt-in-your-mouth texture. This is a great choice for buyers who want a product that feels luxurious right away.",
     image: mazafatiProduct,
     heroImage: mazafatiHeroImage,
     origin: "Iran",
