@@ -3,7 +3,7 @@ import { Section, SectionHeading } from "@/components/Section";
 import { ActionLink } from "@/components/Button";
 import { PageHero } from "@/components/PageHero";
 import { company, principles } from "@/content/site";
-import cargo from "@/assets/cargo-ship.jpg";
+import location from "@/assets/location.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -34,7 +34,7 @@ function AboutPage() {
         breadcrumb="About Us"
         title={`About ${company.name}`}
         subtitle="Building reliable connections across international markets."
-        image={cargo}
+        image={location}
         imageAlt="Aerial view of a container vessel at sea"
       />
 
@@ -101,6 +101,7 @@ function AboutPage() {
           </div>
           <figure>
             <img
+              src={location}
               alt="An image of the company"
               width={1200}
               height={1400}
