@@ -8,7 +8,7 @@ import { companyContact } from "@/content/site";
 import { useI18n } from "@/i18n";
 
 import worldMap from "@/assets/world-map.jpg";
-import { submitContactForm } from "@/server/contact.functions";
+import { submitContactForm } from "@/functions/contact";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

@@ -294,7 +294,7 @@ const en: Dict = {
     detailsTitle: "Company Information",
     formEyebrow: "Inquiry",
     formTitle: "Send Us a Message",
-    sentMessage: "Thank you — your inquiry has been captured. [Connect a form service to deliver it.]",
+    sentMessage: "Thank you — your inquiry has been captured.",
     fields: {
       fullName: "Full Name",
       companyName: "Company Name",
