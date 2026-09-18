@@ -20,9 +20,14 @@ export const Route = createFileRoute("/about")({
         content: "Building reliable connections across international markets.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: "https://orasiatrade.com/about" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://orasiatrade.com/about",
+      },
+    ],
   }),
   component: AboutPage,
 });

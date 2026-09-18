@@ -36,13 +36,13 @@ export const Route = createFileRoute("/contact")({
       },
       {
         property: "og:url",
-        content: "/contact",
+        content: "https://orasiatrade.com/contact",
       },
     ],
     links: [
       {
         rel: "canonical",
-        href: "/contact",
+        href: "https://orasiatrade.com/contact",
       },
     ],
   }),

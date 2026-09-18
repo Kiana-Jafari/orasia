@@ -23,9 +23,14 @@ export const Route = createFileRoute("/products/")({
         content: "Selected products available for international sourcing, import and export.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/products" },
+      { property: "og:url", content: "https://orasiatrade.com/products" },
     ],
-    links: [{ rel: "canonical", href: "/products" }],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://orasiatrade.com/products",
+      },
+    ],
   }),
   component: ProductsPage,
 });
@@ -92,8 +97,8 @@ function ProductsPage() {
               aria-selected={filter === f.key}
               onClick={() => setFilter(f.key)}
               className={`-mb-px border-b-2 px-4 py-3 text-sm transition-colors ${filter === f.key
-                  ? "border-bronze text-navy"
-                  : "border-transparent text-muted-foreground hover:text-navy"
+                ? "border-bronze text-navy"
+                : "border-transparent text-muted-foreground hover:text-navy"
                 }`}
             >
               {f.label}

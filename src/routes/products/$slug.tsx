@@ -25,9 +25,14 @@ export const Route = createFileRoute("/products/$slug")({
         { property: "og:title", content: `${copy.name} | Orasia Trade` },
         { property: "og:description", content: copy.summary },
         { property: "og:type", content: "product" },
-        { property: "og:url", content: `/products/${product.slug}` },
+        { property: "og:url", content: `https://orasiatrade.com/products/${product.slug}` },
       ],
-      links: [{ rel: "canonical", href: `/products/${product.slug}` }],
+      links: [
+        {
+          rel: "canonical",
+          href: `https://orasiatrade.com/products/${product.slug}`,
+        },
+      ],
     };
   },
   component: ProductDetail,

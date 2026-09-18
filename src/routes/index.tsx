@@ -23,10 +23,10 @@ export const Route = createFileRoute("/")({
           "Sourcing, import, export and distribution of selected products across international markets.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://orasiatrade.com/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://orasiatrade.com/" }],
   }),
   component: HomePage,
 });
