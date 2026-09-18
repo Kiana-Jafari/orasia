@@ -503,7 +503,7 @@ const fa: Dict = {
     detailsTitle: "اطلاعات شرکت",
     formEyebrow: "استعلام",
     formTitle: "ارسال پیام:",
-    sentMessage: "با تشکر از همراهی تان — پیغام شما ثبت شد. [برای ارسال واقعی، یه سرویس فرم وصل کن.]",
+    sentMessage: "ممنون از همراهی تون :)))",
     fields: {
       fullName: "نام و نام‌خانوادگی",
       companyName: "نام شرکت",
