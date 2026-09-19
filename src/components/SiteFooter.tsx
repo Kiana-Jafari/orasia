@@ -1,6 +1,13 @@
+import type { ComponentType, SVGProps } from "react";
 import { Link } from "@tanstack/react-router";
 import { navigation, companyContact } from "@/content/site";
 import { useI18n } from "@/i18n";
+import { InstagramIcon, LinkedInIcon } from "@/components/SocialIcons";
+
+const socialIconMap: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
+  Instagram: InstagramIcon,
+  LinkedIn: LinkedInIcon,
+};
 
 export function SiteFooter() {
   const { t } = useI18n();
@@ -46,23 +53,25 @@ export function SiteFooter() {
               </a>
             </li>
 
-            <li className="max-w-xs leading-relaxed">
-              {t.company.address}
-            </li>
+            <li className="max-w-xs leading-relaxed">{t.company.address}</li>
           </ul>
 
           {companyContact.social.length > 0 ? (
             <ul className="mt-5 flex gap-4">
-              {companyContact.social.map((s) => (
-                <li key={s.href}>
-                  <a
-                    href={s.href}
-                    className="text-sm text-primary-foreground/70 hover:text-primary-foreground"
-                  >
-                    {s.label}
-                  </a>
-                </li>
-              ))}
+              {companyContact.social.map((s) => {
+                const Icon = socialIconMap[s.label];
+                return (
+                  <li key={s.href}>
+                    <a
+                      href={s.href}
+                      aria-label={s.label}
+                      className="flex size-9 items-center justify-center rounded-full border border-primary-foreground/20 text-primary-foreground/70 transition-colors hover:border-primary-foreground/50 hover:text-primary-foreground"
+                    >
+                      {Icon ? <Icon className="size-4" /> : s.label}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           ) : null}
         </div>
