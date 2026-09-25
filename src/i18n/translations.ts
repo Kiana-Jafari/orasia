@@ -96,6 +96,15 @@ type Dict = {
     operationsTitle: string;
     operationsIntro: string;
     imageCaption: string;
+    teamEyebrow: string;
+    teamTitle: string;
+    teamIntro: string;
+    teamMembers: {
+      name: string;
+      role: string;
+      story: string;
+      caption: string;
+    }[];
   };
   products: {
     breadcrumb: string;
@@ -258,6 +267,35 @@ const en: Dict = {
     operationsIntro:
       "We'll be delighted to have a 1:1 meeting with you in our company!",
     imageCaption: "",
+    teamEyebrow: "Our People",
+    teamTitle: "Meet the Core Team",
+    teamIntro:
+      "The people behind Orasia Trade — bringing together commercial experience, technical thinking, market knowledge, and a genuine connection with people.",
+
+    teamMembers: [
+      {
+        name: "Yazdan",
+        role: "Sales Representative — Ahvaz & South of Iran",
+        story:
+          "A warm-hearted Ahvazi with a background in Civil Engineering, Yazdan has been part of Orasia’s commercial and southern-market research activities from the very beginning. With a strong interest in entrepreneurship, marketing, business, and investment, he brings a precise and analytical approach to his work. He has a natural affinity for numbers and a close eye for detail — qualities that shape the way he understands markets and builds relationships with customers across South of Iran.",
+        caption: "Behind the numbers, there’s always a good story.",
+      },
+      {
+        name: "Mohammadmehdi",
+        role: "Commercial & Business Development",
+        story:
+          "With a background in Business Management, Mohammadmehdi has been part of Orasia’s commercial team from the beginning. At first glance, he may come across as serious and reserved, but a little interaction reveals a remarkably easy-going and adaptable personality. Curious, open to learning, and genuinely pleasant to work with, he brings flexibility and a willingness to grow into the team.",
+        caption: "First impressions don’t tell the whole story.",
+      },
+      {
+        name: "Kiana",
+        role: "Sales Representative — Tehran & North of Iran",
+        story:
+          "A warm-hearted, cheerful Shirazi, Kiana works across sales, marketing, market research, and technical operations at Orasia. As a Computer Engineering student and the designer behind the company’s website, she brings both a technical and commercial perspective to her work. She has been involved in Orasia’s commercial, marketing, and sales activities from the beginning and genuinely enjoys working with people, understanding markets, and constantly learning. With one foot in the company and the other in the market, she likes staying close to the people and businesses that make trade happen.",
+        caption: "One foot in the company. One foot in the market.",
+      },
+    ],
+
   },
   products: {
     breadcrumb: "Products",
@@ -467,6 +505,34 @@ const fa: Dict = {
     operationsTitle: "کجا کار می‌کنیم",
     operationsIntro: "خوش حال می شویم بتوانیم یک جلسه حضوری در دفتر سعادت آباد داشته باشیم :)",
     imageCaption: "",
+    teamEyebrow: "آدم‌های اوراسیا",
+    teamTitle: "تیم اصلی اوراسیا را بشناسید",
+    teamIntro:
+      "آدم‌هایی که پشت Orasia Trade ایستاده‌اند؛ ترکیبی از تجربه تجاری، نگاه فنی، شناخت بازار و ارتباط واقعی با آدم‌ها.",
+
+    teamMembers: [
+      {
+        name: "یزدان",
+        role: "نماینده فروش — اهواز و جنوب ایران",
+        story:
+          "یزدان، یک اهوازیِ خون‌گرم با پیشینه‌ای در مهندسی عمران است که از همان روزهای ابتدایی در فعالیت‌های تجاری و تحقیقات بازار جنوب Orasia حضور داشته است. علاقه‌ی زیادی به کارآفرینی، بازاریابی، کسب‌وکار و سرمایه‌گذاری دارد و در کارش رویکردی دقیق و تحلیلی دارد. با اعداد رابطه‌ی خوبی دارد و جزئیات را با دقت دنبال می‌کند؛ ویژگی‌هایی که در شیوه‌ی شناخت بازار و ارتباطش با مشتریان در جنوب ایران کاملاً خودش را نشان می‌دهد.",
+        caption: "پشت این همه عدد و رقم، همیشه یک داستان خوب هست.",
+      },
+      {
+        name: "محمدمهدی",
+        role: "تجارت و توسعه کسب‌وکار",
+        story:
+          "محمدمهدی با پیشینه‌ای در مدیریت بازرگانی، از همان ابتدا در تیم تجاری اوراسیا حضور داشته است. شاید در نگاه اول کمی جدی و کم‌حرف به نظر برسد، اما کمی که با او معاشرت کنید، با شخصیتی بسیار راحت، منعطف و همراه روبه‌رو می‌شوید. کنجکاو، مشتاق یادگیری و واقعاً خوش‌برخورد است و انعطاف‌پذیری و میل به رشد را با خودش وارد تیم می‌کند.",
+        caption: "همه‌چیز از اولین برداشت شروع نمی‌شود.",
+      },
+      {
+        name: "کیانا",
+        role: "نماینده فروش — تهران و شمال ایران",
+        story:
+          "کیانا، یک شیرازیِ خون‌گرم و خوش‌روحیه، در Orasia در حوزه‌های فروش، بازاریابی، تحقیقات بازار و موارد فنی فعالیت می‌کند. به‌عنوان دانشجوی مهندسی کامپیوتر و طراح وب‌سایت شرکت، هم نگاه فنی دارد و هم با فضای تجاری آشناست. از همان ابتدا در فعالیت‌های تجاری، بازاریابی و فروش Orasia حضور داشته و از ارتباط با آدم‌ها، شناخت بازار و یادگیری مداوم لذت می‌برد. یک پایش در شرکت است و پای دیگرش در بازار؛ جایی که ترجیح می‌دهد نزدیک به آدم‌ها و کسب‌وکارهایی باشد که تجارت را شکل می‌دهند.",
+        caption: "یه پا تو شرکت ، یه پا تو بازار",
+      },
+    ],
   },
   products: {
     breadcrumb: "محصولات",
@@ -548,7 +614,7 @@ const fa: Dict = {
       name: "دارچین",
       category: "ادویه و گیاهان دارویی",
       summary:
-        " و مشتری دائمی شوید و مشتری دائمی شویدگرم، معطر و پر از شخصیت — دارچین ما از مناطقی تأمین می‌شود که با طعم غنی و روغن طبیعی شان شناخته می شوند. چه بخواهید خط ادویه‌جات خود را پر کنید، چه به نانوایی‌ها و برندهای نوشیدنی بفروشید، می توانید یک سمپل از طرف ما دریافت کنید و مشتری دائمی شوید.",
+        "گرم، معطر و پر از شخصیت — دارچین ما از مناطقی تأمین می‌شود که با طعم غنی و روغن طبیعی‌شان شناخته می‌شوند.چه بخواهید خط ادویه‌جات خود را پر کنید، چه به نانوایی‌ها و برندهای نوشیدنی بفروشید، می‌توانید یک سمپل از طرف ما دریافت کنید و مشتری دائمی شوید.",
       origin: "سریلانکا | اندونزی | ویتنام",
       packaging: "با دریافت یک سمپل طعم و رایحه را امتحان کنید",
     },

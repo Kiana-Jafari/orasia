@@ -4,6 +4,11 @@ import { ActionLink } from "@/components/Button";
 import { PageHero } from "@/components/PageHero";
 import { useI18n } from "@/i18n";
 import location from "@/assets/location.jpg";
+import yazdanSerious from "@/assets/yazdan-serious.png";
+import yazdanCandid from "@/assets/yazdan.png";
+import mehdiSerious from "@/assets/mehdi-serious.png";
+import mehdiCandid from "@/assets/mehdi.png";
+import kianaImage from "@/assets/kiana.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -34,6 +39,8 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   const { t } = useI18n();
+
+
 
   return (
     <>
@@ -75,6 +82,90 @@ function AboutPage() {
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
             </div>
           ))}
+        </div>
+      </Section>
+
+      <Section className="py-16 md:py-20">
+        <SectionHeading
+          eyebrow={t.about.teamEyebrow}
+          title={t.about.teamTitle}
+          intro={t.about.teamIntro}
+        />
+
+        <div className="mt-14 grid gap-14 lg:grid-cols-3">
+          {t.about.teamMembers.map((member, index) => {
+            const images = [
+              {
+                primary: yazdanSerious,
+                candid: yazdanCandid,
+                candidAlt: "Yazdan in a relaxed moment",
+              },
+              {
+                primary: mehdiSerious,
+                candid: mehdiCandid,
+                candidAlt: "Mohammadmehdi in a relaxed moment",
+              },
+              {
+                primary: kianaImage,
+                candid: null,
+                candidAlt: "",
+              },
+            ];
+
+            const imageSet = images[index];
+
+            return (
+              <article key={member.name} className="group">
+                {/* Primary portrait */}
+                <div className="relative">
+                  <div className="overflow-hidden rounded-sm bg-muted">
+                    <img
+                      src={imageSet.primary}
+                      alt={`${member.name} — ${member.role}`}
+                      width={900}
+                      height={1100}
+                      loading="lazy"
+                      className="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                    />
+                  </div>
+
+                  {/* Candid photo */}
+                  {imageSet.candid ? (
+                    <div className="absolute -bottom-8 left-6 w-[34%] overflow-hidden border-4 border-background bg-background shadow-lg">
+                      <img
+                        src={imageSet.candid}
+                        alt={imageSet.candidAlt}
+                        width={500}
+                        height={650}
+                        loading="lazy"
+                        className="aspect-[4/5] w-full object-cover"
+                      />
+                    </div>
+                  ) : null}
+                </div>
+
+                {/* Name & role */}
+                <div className={imageSet.candid ? "mt-14" : "mt-8"}>
+                  <h3 className="text-2xl text-navy">{member.name}</h3>
+
+                  <p className="mt-2 text-sm font-medium tracking-wide text-bronze">
+                    {member.role}
+                  </p>
+                </div>
+
+                {/* Story + caption */}
+                <div className="mt-6 border-t border-hairline pt-5">
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {member.story}
+                  </p>
+
+                  <p className="mt-5 text-sm italic text-navy/70">
+                    {member.caption}
+                  </p>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </Section>
 

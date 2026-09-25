@@ -6,6 +6,7 @@ import { products, companyContact } from "@/content/site";
 import { useI18n } from "@/i18n";
 import heroPort from "@/assets/hero-port.png";
 import worldMap from "@/assets/world-map.jpg";
+import team from "@/assets/core-team.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -73,14 +74,33 @@ function HomePage() {
 
       {/* Who we are */}
       <Section>
-        <div className="max-w-2xl">
-          <SectionHeading eyebrow={t.home.introEyebrow} title={t.home.introTitle} />
-          <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
-            <p>{t.home.introText}</p>
+        <div className="grid items-center gap-10 lg:grid-cols-2">
+
+          {/* Text */}
+          <div className="max-w-2xl">
+            <SectionHeading
+              eyebrow={t.home.introEyebrow}
+              title={t.home.introTitle}
+            />
+
+            <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
+              <p>{t.home.introText}</p>
+            </div>
+
+            <ActionLink to="/about" variant="outline" className="mt-6">
+              {t.actions.readOurStory}
+            </ActionLink>
           </div>
-          <ActionLink to="/about" variant="outline" className="mt-6">
-            {t.actions.readOurStory}
-          </ActionLink>
+
+          {/* Team image */}
+          <div className="overflow-hidden rounded-2xl">
+            <img
+              src={team}
+              alt="Orasia Trade team"
+              className="h-full w-full object-cover"
+            />
+          </div>
+
         </div>
       </Section>
 
