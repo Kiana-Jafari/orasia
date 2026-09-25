@@ -24,6 +24,28 @@ const csrfMiddleware = createCsrfMiddleware({
   filter: (ctx) => ctx.handlerType === "serverFn",
 });
 
+const securityHeadersMiddleware = createMiddleware().server(async ({ next }) => {
+  const response = await next();
+
+  response.headers.set(
+    "Strict-Transport-Security",
+    "max-age=31536000; includeSubDomains",
+  );
+
+  response.headers.set("X-Content-Type-Options", "nosniff");
+
+  response.headers.set(
+    "Referrer-Policy",
+    "strict-origin-when-cross-origin",
+  );
+
+  return response;
+});
+
 export const startInstance = createStart(() => ({
-  requestMiddleware: [errorMiddleware, csrfMiddleware],
+  requestMiddleware: [
+    errorMiddleware,
+    csrfMiddleware,
+    securityHeadersMiddleware,
+  ],
 }));
