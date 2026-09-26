@@ -4,10 +4,10 @@
 // bilingual without duplicating content in two places.
 // -----------------------------------------------------------------------------
 
-import greenCoffeeImage from "@/assets/coffee-sample.png";
+import greenCoffeeImage from "@/assets/coffee-sample.webp";
 import greenCoffeeHeroImage from "@/assets/coffee-background.png";
 
-import turmericProduct from "@/assets/turmeric-product.png";
+import turmericProduct from "@/assets/turmeric-product.webp";
 import turmericHeroImage from "@/assets/turmeric-background.png";
 
 import cinnamonProduct from "@/assets/Cinnamon.webp";

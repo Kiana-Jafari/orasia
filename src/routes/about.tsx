@@ -4,11 +4,11 @@ import { ActionLink } from "@/components/Button";
 import { PageHero } from "@/components/PageHero";
 import { useI18n } from "@/i18n";
 import location from "@/assets/location.jpg";
-import yazdanSerious from "@/assets/yazdan-serious.png";
-import yazdanCandid from "@/assets/yazdan.png";
-import mehdiSerious from "@/assets/mehdi-serious.png";
-import mehdiCandid from "@/assets/mehdi.png";
-import kianaImage from "@/assets/kiana.png";
+import yazdanSerious from "@/assets/yazdan-serious.webp";
+import yazdanCandid from "@/assets/yazdan.webp";
+import mehdiSerious from "@/assets/mehdi-serious.webp";
+import mehdiCandid from "@/assets/mehdi.webp";
+import kianaImage from "@/assets/kiana.webp";
 
 export const Route = createFileRoute("/about")({
   head: () => ({

@@ -4,9 +4,9 @@ import { ActionLink } from "@/components/Button";
 import { ProductCard } from "@/components/ProductCard";
 import { products, companyContact } from "@/content/site";
 import { useI18n } from "@/i18n";
-import heroPort from "@/assets/hero-port.png";
+import heroPort from "@/assets/hero-port.webp";
 import worldMap from "@/assets/world-map.jpg";
-import team from "@/assets/core-team.png";
+import team from "@/assets/core-team.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
