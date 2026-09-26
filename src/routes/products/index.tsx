@@ -6,7 +6,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { ActionLink } from "@/components/Button";
 import { products, type Product } from "@/content/site";
 import { useI18n } from "@/i18n";
-import productsImage from "@/assets/products.png";
+import productsImage from "@/assets/products.webp";
 
 export const Route = createFileRoute("/products/")({
   head: () => ({

@@ -3,7 +3,7 @@ import { Section, SectionHeading } from "@/components/Section";
 import { ActionLink } from "@/components/Button";
 import { PageHero } from "@/components/PageHero";
 import { useI18n } from "@/i18n";
-import location from "@/assets/location.jpg";
+import location from "@/assets/location.webp";
 import yazdanSerious from "@/assets/yazdan-serious.webp";
 import yazdanCandid from "@/assets/yazdan.webp";
 import mehdiSerious from "@/assets/mehdi-serious.webp";
