@@ -1,0 +1,409 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 6px;
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Lora", ui-serif, Georgia, serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-paper: var(--paper);
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-slate: var(--slate);
+  --color-slate-light: var(--slate-light);
+  --color-gold: var(--gold);
+  --color-hairline: var(--hairline);
+}
+
+:root {
+  --radius: 3px;
+  --background: oklch(0.97 0.004 110);
+  --foreground: oklch(0.16 0.03 257);
+  --card: oklch(0.995 0.002 110);
+  --card-foreground: oklch(0.16 0.03 257);
+  --popover: oklch(0.995 0.002 110);
+  --popover-foreground: oklch(0.16 0.03 257);
+  --primary: oklch(0.15 0.045 257);
+  --primary-foreground: oklch(0.99 0.001 110);
+  --secondary: oklch(0.89 0.02 245);
+  --secondary-foreground: oklch(0.15 0.045 257);
+  --muted: oklch(0.94 0.01 245);
+  --muted-foreground: oklch(0.4 0.03 255);
+  --accent: oklch(0.68 0.07 85);
+  --accent-foreground: oklch(0.15 0.045 257);
+  --destructive: oklch(0.56 0.2 27);
+  --destructive-foreground: oklch(0.99 0.001 110);
+  --border: oklch(0.82 0.018 248);
+  --input: oklch(0.78 0.025 248);
+  --ring: oklch(0.68 0.07 85);
+  --paper: oklch(0.97 0.004 110);
+  --navy: oklch(0.15 0.045 257);
+  --navy-deep: oklch(0.11 0.038 257);
+  --slate: oklch(0.45 0.055 250);
+  --slate-light: oklch(0.89 0.02 245);
+  --gold: oklch(0.68 0.07 85);
+  --hairline: oklch(0.82 0.018 248);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  html[dir="rtl"],
+  html:lang(fa) {
+    --font-sans: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  html[dir="rtl"] {
+    font-family: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+    text-rendering: optimizeLegibility;
+  }
+
+  html[dir="rtl"] body {
+    font-family: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  html[dir="rtl"] h1,
+  html[dir="rtl"] h2,
+  html[dir="rtl"] h3,
+  html[dir="rtl"] h4,
+  html[dir="rtl"] button,
+  html[dir="rtl"] input,
+  html[dir="rtl"] textarea,
+  html[dir="rtl"] select {
+    font-family: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  }
+
+
+  body {
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+@utility eyebrow-light {
+  font-size: 0.75rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+@utility reveal {
+  animation: reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    animation: none;
+  }
+}
+
+/* Persian presentation layer
+   The Persian site is intentionally a different visual system, not a translated
+   copy of the English layout. It uses the rounded, card-led hierarchy common
+   to contemporary Persian service/business sites. */
+@layer base {
+  html[dir="rtl"] {
+    font-size: 17px;
+    font-family: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+    text-rendering: optimizeLegibility;
+  }
+
+  html[dir="rtl"] body {
+    font-family: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.9;
+    overflow-x: hidden;
+  }
+
+  html[dir="rtl"] h1,
+  html[dir="rtl"] h2,
+  html[dir="rtl"] h3,
+  html[dir="rtl"] h4 {
+    font-family: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+    font-weight: 800;
+    line-height: 1.35;
+  }
+
+  html[dir="rtl"] button,
+  html[dir="rtl"] input,
+  html[dir="rtl"] textarea,
+  html[dir="rtl"] select {
+    font-family: inherit;
+  }
+
+  html[dir="rtl"] .eyebrow {
+    letter-spacing: 0;
+    text-transform: none;
+    font-size: 0.82rem;
+  }
+}
+
+.fa-site {
+  --fa-blue: #0c2f69;
+  --fa-blue-dark: #0c2f69;
+  --fa-cyan: #16a6c8;
+  --fa-surface: #f7f9fc;
+  --fa-card: #ffffff;
+  background: var(--fa-surface);
+}
+
+.fa-site main {
+  background: var(--fa-surface);
+}
+
+.fa-site .fa-home-hero {
+  min-height: 620px;
+}
+
+.fa-site .fa-home-hero img {
+  opacity: 0.95;
+  mix-blend-mode: normal;
+}
+
+.fa-site .fa-home-hero>div.absolute {
+  background: linear-gradient(270deg, rgb(10 24 43 / 58%), rgb(10 24 43 / 30%) 48%, rgb(10 24 43 / 8%));
+}
+
+.fa-site .fa-home-hero>div:last-child {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.fa-site .fa-home-hero h1 {
+  max-width: 780px;
+  font-size: clamp(2.35rem, 6vw, 4.6rem);
+  line-height: 1.28;
+}
+
+.fa-site .fa-home-hero .eyebrow {
+  color: #9edcf0;
+}
+
+.fa-site .fa-home-hero .inline-flex {
+  border-radius: 14px;
+  min-height: 48px;
+}
+
+
+.fa-site .fa-activity-grid>div {
+  border: 1px solid #e5eaf2;
+  border-radius: 20px;
+  background: var(--fa-card);
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgb(18 44 84 / 7%);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.fa-site .fa-activity-grid>div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgb(18 44 84 / 11%);
+}
+
+.fa-site .fa-activity-grid>div>span {
+  display: inline-grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 11px;
+  background: #eaf3ff;
+  color: var(--fa-blue);
+}
+
+.fa-site .fa-activity-grid h3 {
+  font-size: 1.18rem;
+}
+
+.fa-site .fa-activity-grid p {
+  font-size: 0.92rem;
+}
+
+.fa-site .rounded-2xl,
+.fa-site .rounded-xl {
+  border-radius: 22px;
+}
+
+.fa-site .rounded-sm {
+  border-radius: 12px;
+}
+
+.fa-site section.bg-navy,
+.fa-site section.bg-navy-deep {
+  background-color: var(--fa-blue-dark);
+}
+
+.fa-site .bg-navy {
+  background-color: var(--fa-blue-dark);
+}
+
+
+.fa-site>header {
+  background: rgb(255 255 255 / 92%) !important;
+  border-color: #e5eaf2 !important;
+  box-shadow: 0 6px 24px rgb(12 47 105 / 6%);
+}
+
+.fa-site>header .fa-logo-name {
+  color: #102a4a !important;
+}
+
+.fa-site>header .fa-logo-trade {
+  color: rgb(16 42 74 / 70%) !important;
+}
+
+.fa-site>header nav a,
+.fa-site>header button {
+  color: #17345f !important;
+}
+
+.fa-site>header nav a:hover,
+.fa-site>header button:hover {
+  color: var(--fa-blue) !important;
+}
+
+.fa-site>header .bg-gold {
+  background: var(--fa-blue) !important;
+  color: white !important;
+}
+
+.fa-site>header .text-gold {
+  color: var(--fa-blue) !important;
+}
+
+.fa-site>header .border-gold\/40 {
+  border-color: #b9d7ff !important;
+  background: #edf5ff !important;
+}
+
+.fa-site>header #mobile-nav {
+  background: white !important;
+  border-color: #e5eaf2 !important;
+}
+
+.fa-site>header #mobile-nav a {
+  border-color: #e5eaf2 !important;
+}
+
+@media (max-width: 640px) {
+  html[dir="rtl"] {
+    font-size: 16px;
+  }
+
+  html[dir="rtl"] body {
+    font-size: 0.98rem;
+    line-height: 1.85;
+  }
+
+  .fa-site .fa-home-hero {
+    min-height: 570px;
+  }
+
+  .fa-site .fa-home-hero h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1.38;
+  }
+
+  .fa-site .fa-home-hero>div:last-child {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-site .fa-activity-grid>div {
+    transition: none;
+  }
+}
+
+.fa-site {
+  font-family: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+}
+
+.fa-site p,
+.fa-site span,
+.fa-site a,
+.fa-site button {
+  font-family: inherit;
+}
+
+.fa-site .phone-number {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}

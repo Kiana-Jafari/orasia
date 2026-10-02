@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://orasiatrade.com/sitemap.xml
